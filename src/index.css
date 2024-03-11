@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+/* :root variables */
+/** Para los componentes */
+@layer base {
+  :root {
+    --default: 255,255,255;
+
+    --backdrop: 0,0,0;
+
+    --foreground: 255,255,255,.2;
+
+    --radius: 1.5rem;
+
+    --input: 14,13,18;
+    --input-hover: 14,10,37;
+    --input-focus: 0,0,0;
+
+    --easing-function: cubic-bezier(.4,.29,0,1.08);
+
+    --primary: 255,133,178;
+    --secondary: 229,49,112;
+    --danger: 186, 30, 30;
+    --success: 29,195,36;
+    --warning: 239,155,28;
+
+    --content: 35,30,45;
+    --content-dark: 19,17,24;
+
+    --content-stroke: 255,255,255,.1;
+
+    --paragraph: 207,207,207;
+  }
+}
+
+/* GLOBAL STYLES */
+@layer base {
+  h1 {
+    @apply font-black text-4xl font-poppins
+  }
+  h2 {
+    @apply font-black text-3xl font-poppins
+  }
+  h3 {
+    @apply font-bold text-2xl font-poppins
+  }
+  h4 {
+    @apply font-bold text-lg font-poppins
+  }
+  p {
+   @apply text-paragraph
+  }
+  body {
+    @apply min-h-[100dvh] text-default
+  }
+  svg {
+    @apply size-5
+  }
+}
+
+/* Scroll styles */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0e17;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff7cde;
+  border-radius: 0.2rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d05b87;
+}
+
+.scrollbar-mini::-webkit-scrollbar {
+  width: 3px;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Input style color */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition:
+    background-color 600000s 0s,
+    color 600000s 0s;
+}
+input[data-autocompleted] {
+  background-color: transparent !important;
+}
