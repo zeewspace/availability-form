@@ -2,7 +2,6 @@ import { Formik, Form, FieldArray } from "formik";
 import Field from "./Components/Input";
 import Select from "./Components/Select";
 import { useState } from "react";
-import { convertLocalTimeToUTC } from "./Utils/functions";
 import { TimeZone } from "./Components/TimeZone";
 
 const Days = [
@@ -39,10 +38,7 @@ const App = () => {
             ],
           }}
           onSubmit={(values) => {
-            setLocal({
-              timezone: values.timezone,
-              utc: convertLocalTimeToUTC(values),
-            });
+            setLocal(values);
           }}
         >
           {({ values }) => (

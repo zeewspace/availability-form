@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: 'https://zeewspace.github.io/availability-form'
+  // base: 'https://zeewspace.github.io/availability-form'
 })
